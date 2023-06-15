@@ -52,14 +52,15 @@ endmodule
 ```
 ### Full Adder:
 ``` 
-module fulladder(a,b,ci,s,co);
-input a,b,ci;
-output s,co;
-wire d,e,f;
-xor (d,a,b);
-xor (s,d,ci);
-and (f,a,b);
-or (co,e,f);
+module full_adder(x,y,z,s,c);
+input x,y,z;
+output s,c;
+wire x1,x3,x4;
+xor(x1,x,y);
+xor(s,x1,z);
+and(x3,x,y);
+and(x4,x,y);
+or(c,x3,x4);
 endmodule
 
 ```
